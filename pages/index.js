@@ -13,10 +13,7 @@ const RIGHT_SIDENAV_CONTENT = [
   { link: "#", text: "Create Account" },
 ]
 
-const LEFT_SIDENAV_CONTENT = [
-  { icon: faHashtag, text: "Explore" },
-  { icon: faGear, text: "Settings" },
-]
+
 
 export default function Home() {
   return (
