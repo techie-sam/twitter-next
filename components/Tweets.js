@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 const Tweets = () => {
     const route = useRouter()
-    
+
     return (
         <div className="max-h-screen w-[90%] md:w-[50w] border border-gray-300  overflow-y-auto">
             <nav className="w-full border-b bg-white bg-opacity-50 backdrop-blur-lg border-gray-300 sticky top-0">
@@ -35,8 +35,8 @@ const Tweets = () => {
     )
 }
 
-Tweets.propTypes = {
-    params: PropTypes.string.isRequired,
-};
+// Tweets.propTypes = {
+//     params: PropTypes.string.isRequired,
+// };
 
 export default Tweets

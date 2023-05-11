@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-const RightSideNav = ({ RIGHT_SIDENAV_CONTENT, route }) => {
+const RightSideNav = () => {
    
     return (
         <div className="h-full hidden xl:block md:w-[45vw] border border-gray-300 p-5">
-            {
+            {/* {
                 route === "landingPage" &&
                 <div className="p-5 border border-sm rounded-2xl">
                     <h3 className="text-xl font-extrabold">New to Twitter?</h3>
@@ -17,8 +17,8 @@ const RightSideNav = ({ RIGHT_SIDENAV_CONTENT, route }) => {
                         <p>By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.</p>
                     </div>
                 </div>
-            }
-            {
+            } */}
+            {/* {
                 route === "mainApp" &&
                 <>
                     <nav>
@@ -30,7 +30,7 @@ const RightSideNav = ({ RIGHT_SIDENAV_CONTENT, route }) => {
                         </ul>
                     </nav>
                 </>
-            }
+            } */}
         </div>
     )
 }
