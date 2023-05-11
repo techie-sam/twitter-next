@@ -1,7 +1,6 @@
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-// import { PropTypes } from "prop-types";
 import { useRouter } from "next/router";
 
 
@@ -28,6 +27,17 @@ const Tweets = () => {
                     </>
                 }
                 {
+                    route.asPath === "/explore" &&
+                    <>
+                        <ul className="sticky">
+                            <input type="text" placeholder="Search" className="w-full pl-10 pr-4 py-2 rounded-2xl bg-gray-200 focus:outline-none focus:border-blue-500 border" />
+                            <div className="absolute inset-y-0 pl-3 left-0 flex items-center ">
+                                <i className="fas fa-search"></i>
+                            </div>
+                        </ul>
+                    </>
+                }
+                {
                     route.asPath === "/notifications" &&
                     <>
                         <Link href="notifications">
@@ -35,8 +45,6 @@ const Tweets = () => {
                         </Link>
                     </>
                 }
-
-
             </nav>
             <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
 
@@ -45,8 +53,5 @@ const Tweets = () => {
     )
 }
 
-// Tweets.propTypes = {
-//     params: PropTypes.string.isRequired,
-// };
 
 export default Tweets
