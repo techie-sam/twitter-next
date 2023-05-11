@@ -4,13 +4,30 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 
-const Tweets = () => {
+const Tweets = ({ bottomNavContent }) => {
     const route = useRouter()
     return (
         <div className="max-h-screen w-[90%] md:w-[50w] border border-gray-300  overflow-y-auto">
+            {
+                <div className="relative  ">
+                    <nav className="fixed bottom-0">
+                        <ul className="flex justify-evenly">
+                            {
+                                bottomNavContent.map(({ text, href }) =>
+                                    <li key={href} >
+                                        <Link href={href}>
+                                            {route.asPath === "/" ? text : <FontAwesomeIcon icon={text} />}
+                                        </Link>
+                                    </li>
+                                )
+                            }
+                        </ul>
+                    </nav>
+                </div>
+            }
             <nav className="w-full border-b bg-white bg-opacity-50 backdrop-blur-lg border-gray-300 sticky top-0">
                 {
-                    route === "/" &&
+                    route.asPath === "/" &&
                     <div className="flex justify-between text-2xl p-5">
                         <h3>Explore</h3>
                         <FontAwesomeIcon icon={faGear} />

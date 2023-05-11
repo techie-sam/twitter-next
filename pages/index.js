@@ -10,6 +10,11 @@ const menuItems = [
   { icon: faHashtag, text: "Explore", href:"/" },
 ]
 
+const bottomNavContent =[
+  { text:"Login", href:"#", icon:"" },
+  { text:"NavBar", href:"#", icon:"" }
+]
+
 // const rightBarContents = [
 //   { link: "#", text: "Sign in as" },
 //   { link: "#", text: "Sign Up With Apple" },
@@ -22,7 +27,7 @@ export default function Home(props) {
   return (
     <main className='flex justify-center h-screen space-x-2'>
       <LeftSideNav menuItems={menuItems} />
-      <Tweets />
+      <Tweets bottomNavContent={bottomNavContent}/>
       <RightSideNav />
     </main>
   )

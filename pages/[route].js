@@ -5,13 +5,20 @@ import { faBell, faHamburger, faHashtag, faHouse, faMessage, faSave, faUser, faU
 import Head from "next/head";
 
 const menuItems = [
-  { icon: faHouse, text: "Home", href:"home"},
-  { icon: faHashtag, text: "Explore", href:"explore"},
-  { icon: faBell, text: "Notifications", href:"notifications"},
-  { icon: faMessage, text: "Messages", href:"messages"},
-  { icon: faSave, text: "Bookmarks", href:"bookmarks"},
-  { icon: faUser, text: "Profile", href:"profile"},
-  { icon: faHamburger, text: "More", href:"more" },
+    { icon: faHouse, text: "Home", href: "home" },
+    { icon: faHashtag, text: "Explore", href: "explore" },
+    { icon: faBell, text: "Notifications", href: "notifications" },
+    { icon: faMessage, text: "Messages", href: "messages" },
+    { icon: faSave, text: "Bookmarks", href: "bookmarks" },
+    { icon: faUser, text: "Profile", href: "profile" },
+    { icon: faHamburger, text: "More", href: "more" },
+]
+
+const bottomNavContent = [
+    { text: faHouse, href: "home" },
+    { text: faBell, href: "notifications" },
+    { text: faMessage, href: "messages" },
+    { text: faUser, href: "messages" },
 ]
 
 
@@ -23,7 +30,7 @@ const PageType = () => {
             </Head>
             <div className='flex justify-center h-screen space-x-2'>
                 <LeftSideNav menuItems={menuItems} />
-                <Tweets />
+                <Tweets bottomNavContent={bottomNavContent} />
                 <RightSideNav />
             </div>
         </>
