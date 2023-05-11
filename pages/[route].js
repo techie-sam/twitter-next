@@ -15,8 +15,7 @@ const menuItems = [
 ]
 
 
-const PageType = ({ params }) => {
-    console.log(params)
+const PageType = () => {
     return (
         <>
             <Head>

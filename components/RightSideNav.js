@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 const RightSideNav = () => {
-   
+
     return (
         <div className="h-full hidden xl:block md:w-[45vw] border border-gray-300 p-5">
             {/* {
@@ -36,8 +36,8 @@ const RightSideNav = () => {
 }
 
 RightSideNav.propTypes = {
-    RIGHT_SIDENAV_CONTENT: PropTypes.array.isRequired,
-    route: PropTypes.string.isRequired,
+    // RIGHT_SIDENAV_CONTENT: PropTypes.array.isRequired,
+    // route: PropTypes.string.isRequired,
 };
 
 
