@@ -16,9 +16,8 @@ import { faGear, faHashtag } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Home({ menuItems, bottomNavContent }) {
-  console.log(props);
   return (
-    <main className='flex justify-center h-screen space-x-2'>
+    <main className='flex justify-center h-screen'>
       <LeftSideNav menuItems={menuItems} />
       <Tweets bottomNavContent={bottomNavContent} />
       <RightSideNav />

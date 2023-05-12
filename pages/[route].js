@@ -10,7 +10,7 @@ const PageType = ({ menuItems, bottomNavContent, title }) => {
             <Head>
                 <title>{title.toUpperCase()}</title>
             </Head>
-            <div className='flex justify-center h-screen space-x-2'>
+            <div className='flex justify-center h-screen'>
                 <LeftSideNav menuItems={menuItems} />
                 <Tweets bottomNavContent={bottomNavContent} />
                 <RightSideNav />

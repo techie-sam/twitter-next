@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 const RightSideNav = () => {
 
     return (
-        <div className="h-full hidden xl:block md:w-[45vw] border border-gray-300 p-5">
+        <div className="h-full hidden xl:block md:w-[45vw] p-5 bg-white dark:bg-gray-900">
             {/* {
                 route === "landingPage" &&
                 <div className="p-5 border border-sm rounded-2xl">

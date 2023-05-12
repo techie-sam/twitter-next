@@ -5,9 +5,8 @@ import { useRouter } from 'next/router';
 
 const LeftSideNav = ({ menuItems }) => {
     const router = useRouter()
-    // console.log(router)
     return (
-        <div className="h-screen lg:w-[20%] xl:min-w-[25%] border hidden md:block border-gray-300">
+        <div className="h-screen lg:w-[20%] xl:min-w-[25%]  hidden md:block border-gray-300 bg-white dark:bg-gray-900 dark:text-white">
             <div className="p-20 w-full space-y-3">
                 <div className='border'>
                 </div>

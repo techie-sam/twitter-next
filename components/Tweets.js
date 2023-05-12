@@ -7,24 +7,20 @@ import { useRouter } from "next/router";
 const Tweets = ({ bottomNavContent }) => {
     const route = useRouter()
     return (
-        <div className="max-h-screen w-[90%] md:w-[50w] border border-gray-300  overflow-y-auto">
-            {
-                <div className="relative  ">
-                    <nav className="fixed bottom-0">
-                        <ul className="flex justify-evenly">
-                            {
-                                bottomNavContent.map(({ text, href }) =>
-                                    <li key={href} >
-                                        <Link href={href}>
-                                            {route.asPath === "/" ? text : <FontAwesomeIcon icon={text} />}
-                                        </Link>
-                                    </li>
-                                )
-                            }
-                        </ul>
-                    </nav>
-                </div>
-            }
+        <div className="relative max-h-screen w-[90%] md:w-[50w] border-r border-l border-gray-300  overflow-y-auto bg-white dark:bg-gray-900">
+            <nav className="fixed bottom-0">
+                <ul className="flex space-x-4 justify-evenly">
+                    {
+                        bottomNavContent.map(({ text, href }) =>
+                            <li key={href} >
+                                <Link href={href}>
+                                    {route.asPath === "/" ? text : <FontAwesomeIcon icon={text} />}
+                                </Link>
+                            </li>
+                        )
+                    }
+                </ul>
+            </nav>
             <nav className="w-full border-b bg-white bg-opacity-50 backdrop-blur-lg border-gray-300 sticky top-0">
                 {
                     route.asPath === "/" &&
